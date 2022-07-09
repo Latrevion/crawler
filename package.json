@@ -15,6 +15,7 @@
   "author": "Latrevion",
   "license": "ISC",
   "dependencies": {
+    "enquirer": "^2.3.6",
     "node-fetch": "^2.6.7"
   }
 }
