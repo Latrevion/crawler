@@ -13,5 +13,8 @@
     "爬虫"
   ],
   "author": "Latrevion",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
 }
