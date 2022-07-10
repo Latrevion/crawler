@@ -9,13 +9,6 @@ const http = require("http")
 const handler = require("serve-handler")
 const open = require('open')
 
-// fetch("https://www.nowcoder.com/search?type=post&order=recall&query=%E8%85%BE%E8%AE%AF+%E5%89%8D%E7%AB%AF&subType=0&tagId=&page=2")
-//   .then(res => res.text())
-//     .then(text => {
-//       console.log(text)
-//     })
-
-
 async function start() {
   let result = {}
 
@@ -45,7 +38,7 @@ async function start() {
     choices: ["阿里巴巴", "字节跳动", "腾讯", "拼多多", "百度", "华为"]
   })
   Object.assign(result, response)
-  // console.log(response)
+
 
   let page = 1
   let count = 0 //已经下载的数量
@@ -79,7 +72,7 @@ async function start() {
   }).listen(3000,async ()=>{
     await open('http://localhost:3000')
   })
-  // console.log('打开 http://localhost:8080')
+  console.log('打开 http://localhost:3000')
 }
 
 start()
