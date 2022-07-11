@@ -1,6 +1,6 @@
 {
   "name": "crawler_learn",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "面试经验爬虫",
     "main": "index.js",
   "bin": {

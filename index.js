@@ -42,18 +42,15 @@ async function start() {
   let count = 0 //已经下载的数量
   let urls = []
   do {
-    // let url = `https://www.nowcoder.com/search?type=post&order=recall&query=${result.company}+${result.job}&subType=0&tagId=&page=${page}`
+
     let url = `https://www.nowcoder.com/search?type=post&subType=2&tagId=0&order=create&page=${page}&query=${result.company}+${result.job}`
     let res = await fetch(url)
     let body = await res.text()
 
     urls = body.match(/\/discuss\/\d+\?.+"/g)
-
-    // urls = urls.map(text => `https://www.nowcoder.com${text.replace("\"", "")}`)
     urls = urls.map(s=>'https://www.nowcoder.com' + s.replace('"', ''))
 
     for (let i = 0; i < urls.length; i++) {
-
       let res = await  fetch(urls[i])
       let body = await res.text()
       //解决页面http强制转换https的情况
