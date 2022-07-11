@@ -47,6 +47,8 @@ async function start() {
     let url = `https://www.nowcoder.com/search?type=post&order=recall&query=${result.company}+${result.job}&subType=0&tagId=&page=${page}`
     let res = await fetch(url)
     let body = await res.text()
+    //解决页面http强制转换https的情况
+    body = body.replace(/<script[\s\S]+?<\/script>/g, '')
 
     urls = body.match(/\/discuss\/\d+\?.+?"/g) || []
 
